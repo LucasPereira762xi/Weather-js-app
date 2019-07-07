@@ -16,6 +16,9 @@
 .fbw{
     flex-wrap: wrap;
 }
+.fcoluna{
+    flex-direction: column;
+}
 .clear{
     clear: both;
     display: block;
@@ -90,6 +93,43 @@
 .w100{
     width: 100%;
 }
+.h100{
+    height: 100vh;
+}
+body{
+    height: 100vh;
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+}
+.location{
+    height: 30vh;
+}
+.temperature{
+    height: 30vh;
+}
+.degree-sec span{
+    margin-left: 10px;
+    font-size: 30px;
+}
+.degree-sec h2{
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1366px){
