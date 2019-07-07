@@ -23,10 +23,16 @@ window.addEventListener('load', ()=>{
                 console.log(data);
                 // PEGANDO ELEMENTOS DO DATA
                 // O FORMATO 'const {temperature}' É FORMA AGIL DE COLETAR OS ELEMENTOS
-                const {temperature, summary} = data.currently;
+                const {temperature, summary, icon} = data.currently;
                 // SET DOM ELEMENTS DIRETO DA API
                 const $cel = ((temperature - 32) * 5/9);
                 temperatureDegree.textContent = $cel.toFixed(0);
+                temperatureDescription.textContent = summary;
+                timezone.textContent = data.timezone;
+
+                // SET ICON 
+                const icone = document.querySelector('.icon');
+                setIcons(icon, icone);
             })
         });
 
@@ -35,4 +41,10 @@ window.addEventListener('load', ()=>{
         h1.textContent = "SEM LOCALIZAÇÃO :(";
     }
     
+    function setIcons(icon, iconID){
+        const skycons     = new Skycons({color: "white"});
+        const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+        skycons.play();
+        return skycons.set(iconID, Skycons[currentIcon]);
+    }
 });
