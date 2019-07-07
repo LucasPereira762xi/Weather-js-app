@@ -1,0 +1,125 @@
+/* PADRÃO ÁGIL FLEXBOX */
+/* by Lucas Pereira */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.dflex{
+    display: flex;
+}
+.fbw{
+    flex-wrap: wrap;
+}
+.clear{
+    clear: both;
+    display: block;
+}
+.table{
+    display: table;
+}
+/* ALINHAMENTOS HORIZONTAIS */
+.just-center{
+    justify-content: center;
+}
+.just-sa{
+    justify-content: space-around;
+}
+.just-sb{
+    justify-content: space-between;
+}
+.just-start{
+    justify-content: flex-start;
+}
+.just-end{
+    justify-content: flex-end;
+}
+/* ALINHAMNETOS PP */
+.alg-center{
+    align-items: center;
+}
+.alg-start{
+    align-items: flex-start;
+}
+.alg-end{
+    align-items: end;
+}
+.alg-base{
+    align-items: baseline;
+}
+/* ALINHAMENTOS C/HIGHT */
+.alg-cont-center{
+    align-content: center;
+}
+.alg-cont-start{
+    align-content: flex-start;
+}
+.alg-cont-end{
+    align-content: flex-end;
+}
+.alg-cont-space{
+    align-content: space-between;
+}
+.alg-cont-stretch{
+    align-content: stretch;
+}
+.back-red{
+    background: red;
+}
+/* COLUNAS DEFAULT 1200px*/
+.w20{
+    width: calc(20% - 5px);
+}
+.w30{
+    width:calc(30% - 5px);
+}
+.w50{
+    width: calc(50% - 5px);
+}
+.w70{
+    width: calc(70% - 5px);
+}
+.w80{
+    width: calc(80% - 5px);
+}
+.w100{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1366px){
+    .container{
+        max-width: 1050px;
+    }
+}
+@media screen and (max-width: 768px){
+    .container{
+        max-width: 576px;
+    }
+    .w20{
+        width: 100%;
+    }
+    .w30{
+        width: 100%;
+    }
+    .w50{
+        width: 100%;
+    }
+    .w70{
+        width: 100%;
+    }
+    .w80{
+        width: 100%;
+    }
+       
+}
+@media screen and (max-width: 768px){
+    .container{
+        padding: 0 3%;
+    }
+}
